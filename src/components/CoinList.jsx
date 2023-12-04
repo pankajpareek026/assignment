@@ -29,6 +29,7 @@ export default function CoinList() {
       let result = await fetch(url, {
         // method:"GET",
         headers: {
+          "mode": 'no-cors',
           "cache-control": "max-age=30,public,must-revalidate,s-maxage=30",
           "content-type": "application/json; charset=utf-8"
         }
