@@ -1,13 +1,7 @@
 import { Box, Button, Container, IconButton, Stack, TextField, Typography } from '@mui/material'
 import React from 'react'
 import SwapVertIcon from '@mui/icons-material/SwapVert';
-import FormControlContext from '@mui/material/FormControl/FormControlContext';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import CoinList from './CoinList';
-import CoinListContainer from './coinListContainer';
+import CoinListContainer from './coinListContainer.jsx';
 import { Settings } from '@mui/icons-material';
 import Btn from './Btn';
 
