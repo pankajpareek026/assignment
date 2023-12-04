@@ -1,7 +1,7 @@
 import { Box, Button, Container, IconButton, Stack, TextField, Typography } from '@mui/material'
 import React from 'react'
 import SwapVertIcon from '@mui/icons-material/SwapVert';
-import CoinListContainer from './coinListContainer.jsx';
+import CoinListContainer from './CoinListContainer.jsx';
 import { Settings } from '@mui/icons-material';
 import Btn from './Btn';
 
