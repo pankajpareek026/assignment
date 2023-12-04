@@ -79,8 +79,8 @@ const Footer = () => {
         <FooterSection
           text={"USDs Arbitrum"}
           image={<Logo styles={logoStyles} />}
-          icon1={<ContentCopyIcon />}
-          icon2={<LaunchIcon />}
+          icon1={<ContentCopyIcon fontSize='x-small' />}
+          icon2={<LaunchIcon fontSize="x-small" />}
         />
 
         <FooterSection
