@@ -31,7 +31,8 @@ export default function CoinList() {
         headers: {
           "mode": 'no-cors',
           "cache-control": "max-age=30,public,must-revalidate,s-maxage=30",
-          "content-type": "application/json; charset=utf-8"
+          "content-type": "application/json, charset=utf-8",
+          'Access-Control-Allow-Origin':"*"
         }
       })
       result = await result.json()
