@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Container, Stack, Box, Typography } from '@mui/material'
+import { useMediaQuery,useTheme, Stack, Box, Typography } from '@mui/material'
 import TelegramIcon from '@mui/icons-material/Telegram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import medium from '../assets/medium.svg'
@@ -39,8 +39,10 @@ const logoStyles = {
 
 }
 const Footer = () => {
+  const theme = useTheme();
+  const smallScreen = useMediaQuery(theme.breakpoints.down("md"))
   return (
-    <Box
+    <Box width={"sm"}
       sx={{
         borderTop: "1px solid #000",
         marginTop: "auto",
@@ -56,7 +58,7 @@ const Footer = () => {
           <Btn text={"Snapshot"} styles={buttonStyles} buttonType={"outlined"} />
         </Stack>
 
-        <Stack direction={"row"} spacing={1.5}>
+        <Stack direction={"row"} flexWrap={"wrap"} spacing={1.5}>
           <TelegramIcon />
           <GitHubIcon />
           <TwitterIcon />
@@ -66,7 +68,7 @@ const Footer = () => {
       </Stack>
 
       <Stack
-        direction={"row"}
+        direction={smallScreen?"column":"row"}
         sx={
           {
             width: "100%",
@@ -86,23 +88,23 @@ const Footer = () => {
         <FooterSection
           text={"SPA Arbitrum"}
           image={<Logo styles={logoStyles} />}
-          icon1={<ContentCopyIcon />}
-          icon2={<LaunchIcon />}
+          icon1={<ContentCopyIcon fontSize='x-small' />}
+          icon2={<LaunchIcon fontSize='x-small' />}
         />
 
         <FooterSection
           text={"vSPA Arbitrum"}
           image={<Logo styles={logoStyles} />}
-          icon1={<ContentCopyIcon />}
-          icon2={<LaunchIcon />}
+          icon1={<ContentCopyIcon fontSize='x-small'/>}
+          icon2={<LaunchIcon fontSize='x-small' />}
         />
 
         <Stack direction={"column"}>
           <FooterSection
             text={"vSPA Arbitrum"}
             image={<Logo styles={logoStyles} />}
-            icon1={<ContentCopyIcon />}
-            icon2={<LaunchIcon />}
+            icon1={<ContentCopyIcon fontSize='x-small' />}
+            icon2={<LaunchIcon fontSize='x-small' />}
           />
 
           <Stack direction={"column"} spacing={2} mt={5}>

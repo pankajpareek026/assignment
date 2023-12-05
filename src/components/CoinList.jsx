@@ -43,6 +43,9 @@ export default function CoinList() {
     } catch (error) {
       console.log(error)
     }
+    finally {
+      setLoading(false)
+    }
   }
   return (
     <Box sx={{ minWidth: 135 }} height={"50px"}>
@@ -68,6 +71,7 @@ export default function CoinList() {
           defaultChecked={"BTC"}
           onChange={handleChange}
           onFocus={fetchCoins}
+          value={""}
         >
 
 
@@ -75,11 +79,11 @@ export default function CoinList() {
           {
             loading ?
 
-              <>
-                <MenuItem disabled selected value={""} padding={2}> ...
-                  <CircularProgress />
-                </MenuItem>
-              </>
+
+              (<MenuItem disabled selected value={""} padding={2}> ...
+                <CircularProgress />
+              </MenuItem>)
+
 
               :
               coins.map((item) => {

@@ -1,10 +1,8 @@
-import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { createTheme } from '@mui/material/styles';
-import Navbar from './components/Navbar'
 import Swap from './components/Swap'
 import TokenFetch from './components/TokenFetch';
 import Footer from './components/Footer';
+import Navigation from './components/Navigation.jsx';
 
 
 
@@ -13,7 +11,8 @@ function App() {
     <>
 
       <BrowserRouter>
-        <Navbar />
+        {/* <Navbar /> */}
+        <Navigation/>
         <Routes>
           <Route path='/' element={<TokenFetch />} />
           <Route path='/home' element={<TokenFetch />} />

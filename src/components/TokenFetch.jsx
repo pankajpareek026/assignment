@@ -12,7 +12,7 @@ const TokenFetch = () => {
 
   const [ethAddress, setEthAddress] = useState("")
   const [error, setError] = useState(false)
-  const[otherTokens,setOtherTokens]=useState(false)
+  const [otherTokens, setOtherTokens] = useState(false)
   const [errorMessage, setErrorMessage] = useState(null)
   const [erc20Tokens, setErc20Tokens] = useState([])
   const [loading, setLoading] = useState(false)
@@ -124,7 +124,7 @@ const TokenFetch = () => {
             padding: "20px 12px",
             fontSize: "large",
             height: "8px",
-            textTransform: "none",
+
           }} variant="contained" >
           {loading ? "Fetching" : "submit"}
         </Button>
@@ -155,11 +155,11 @@ const TokenFetch = () => {
 
             <FormControlLabel
               control={
-              <Checkbox onChange={()=>setOtherTokens(!otherTokens)} />}
-              label={`Show Other ${(erc20Tokens?.tokens?.length)?(erc20Tokens?.tokens?.length):0} Token Balance `}
+                <Checkbox onChange={() => setOtherTokens(!otherTokens)} />}
+              label={`Show Other ${(erc20Tokens?.tokens?.length) ? (erc20Tokens?.tokens?.length) : 0} Token Balance `}
             />
-              
-            {otherTokens&&(<Box sx={{ overflowY: "scroll" }} mt={5} bgc height={250} p={1.5}>
+
+            {otherTokens && (<Box sx={{ overflowY: "scroll" }} mt={5} bgc height={250} p={1.5}>
               {
                 (erc20Tokens?.tokens) ?
 

@@ -8,7 +8,6 @@ import Btn from './Btn';
 const buttonStyles = {
   backgroundColor: "#F4F6F8",
   color: "black",
-  textTransform: "none",
   borderRadius: "50px",
   marginLeft: "3%",
   fontSize: "large",

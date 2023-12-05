@@ -2,10 +2,9 @@ import React, { useState } from 'react'
 import Button from '@mui/material/Button';
 import { TextField } from '@mui/material';
 import CircularProgress from '@mui/material/CircularProgress';
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 function TransferToken({ isEthAddress }) {
 
-  const [error, setError] = useState(false)
   const [loading, setLoadig] = useState(false)
   const [reciepentEhtAddress, setReciepentEhtAddress] = useState("")
   const [invalidRecipientAddress, setInvalidRecipientAddress] = useState(false)
