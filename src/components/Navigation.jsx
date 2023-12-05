@@ -46,7 +46,7 @@ const Navigation = () => {
                                         pages.map((page, index) => {
                                             return (
 
-                                                <Button color="inherit" key={index} component={Link} to={`/${(page).toLowerCase()}`}>
+                                                <Button color="black" key={index} component={Link} to={`/${(page).toLowerCase()}`}>
                                                     {page}
                                                 </Button>
                                             )
