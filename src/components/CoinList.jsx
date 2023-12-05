@@ -71,7 +71,7 @@ export default function CoinList() {
           defaultChecked={"BTC"}
           onChange={handleChange}
           onFocus={fetchCoins}
-          value={""}
+          value={coin}
         >
 
 

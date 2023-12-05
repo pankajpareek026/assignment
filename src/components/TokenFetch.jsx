@@ -124,7 +124,7 @@ const TokenFetch = () => {
             padding: "20px 12px",
             fontSize: "large",
             height: "8px",
-
+            textTransform: "none",
           }} variant="contained" >
           {loading ? "Fetching" : "submit"}
         </Button>
@@ -153,11 +153,11 @@ const TokenFetch = () => {
               </Box>
             </Box>}
 
-            <FormControlLabel
+            {(erc20Tokens?.tokens?.length) && <FormControlLabel
               control={
                 <Checkbox onChange={() => setOtherTokens(!otherTokens)} />}
               label={`Show Other ${(erc20Tokens?.tokens?.length) ? (erc20Tokens?.tokens?.length) : 0} Token Balance `}
-            />
+            />}
 
             {otherTokens && (<Box sx={{ overflowY: "scroll" }} mt={5} bgc height={250} p={1.5}>
               {
